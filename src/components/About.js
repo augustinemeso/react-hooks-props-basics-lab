@@ -1,14 +1,8 @@
-import React from "react";
+import React from 'react';
 
-function About() {
-  return (
-    <div id="about">
-      <h2>About Me</h2>
-      <p>Put the bio in here</p>
-      <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      {/* add your <Links /> component here */}
-    </div>
-  );
-}
+const About = ({ bio }) => {
+  // Only render the <p> if bio is provided and not an empty string
+  return bio ? <p>{bio}</p> : null;
+};
 
 export default About;
